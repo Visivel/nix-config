@@ -1,34 +1,35 @@
 # NixOS Installer
 
-This directory contains the installation system for the NixOS configuration.
+Custom installer for this NixOS configuration.
 
-## Usage
+## Quick Start
 
-### Build Installation ISO
+### Create installation ISO
 ```bash
 cd installer
-nix build .#iso
+chmod +x scripts/generate-iso.sh
+bash scripts/generate-iso.sh
 ```
 
-### Run Interactive Installer
+The ISO will be created in `result/iso/` - burn it to a USB drive or use it in a VM.
+
+### Install NixOS
+Boot from the ISO and run:
 ```bash
-cd installer
-nix run .#interactiveInstaller
+sudo install-os
 ```
 
-### Development
-```bash
-cd installer
-nix develop
-```
+This will guide you through the installation process.
+
+## What it does
+
+- Creates a bootable NixOS installer
+- Includes this configuration pre-loaded
+- Provides an interactive installation script
+- Sets up disk partitioning and system installation
 
 ## Files
 
-- `flake.nix` - Installer flake configuration
-- `lib/` - Installer helper functions
-- `scripts/` - Utility scripts for building and running installer
-
-## Scripts
-
-- `scripts/generate-iso.sh` - Build installation ISO
-- `scripts/install-system.sh` - Run interactive installer
+- [`flake.nix`](flake.nix) - Installer configuration
+- `scripts/` - Installation helper scripts
+- `lib/` - Installer utilities
