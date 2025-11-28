@@ -39,7 +39,11 @@
       "iptable_filter"
       "iptable_mangle"
       "iptable_nat"
+      "amd_iommu=on"
+      "iommu=pt"
     ];
+
+    kernelModules = [ "kvm-amd" "vfio-pci" ];
 
     kernel.sysctl = {
       "vm.dirty_ratio" = 15;

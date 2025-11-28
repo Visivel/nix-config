@@ -63,6 +63,6 @@
     allowBroken = false;
     allowInsecure = false;
     
-    permittedInsecurePackages = [ ];
+    permittedInsecurePackages = [  ];
   };
 }

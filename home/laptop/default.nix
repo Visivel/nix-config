@@ -13,9 +13,9 @@
     homeDirectory = "/home/${username}";
     stateVersion = "25.11";
     pointerCursor = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-      size = 24;
+      name = "macOS-White";
+      package = pkgs.apple-cursor;
+      size = 20;
       gtk.enable = true;
     };
   };
@@ -39,9 +39,9 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-      size = 24;
+      name = "macOS-White";
+      package = pkgs.apple-cursor;
+      size = 20;
     };
   };
 }

@@ -122,6 +122,7 @@
           echo "🔧 NixOS Installer Development Environment"
           echo "Available commands:"
           echo "  nix build .#iso"
+          echo "  nix run .#interactiveInstaller"
         '';
       };
     };
