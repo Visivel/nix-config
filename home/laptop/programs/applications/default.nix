@@ -23,7 +23,7 @@
         };
       };
     };
+
+    update.onActivation = true;
   };
-  
-  update.onActivation = true;
 }
