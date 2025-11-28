@@ -12,12 +12,6 @@
     username = username;
     homeDirectory = "/home/${username}";
     stateVersion = "25.11";
-    pointerCursor = {
-      name = "macOS-White";
-      package = pkgs.apple-cursor;
-      size = 20;
-      gtk.enable = true;
-    };
   };
 
   xdg = {
@@ -33,15 +27,6 @@
       videos = "${config.home.homeDirectory}/Videos";
       publicShare = null;
       templates = null;
-    };
-  };
-
-  gtk = {
-    enable = true;
-    cursorTheme = {
-      name = "macOS-White";
-      package = pkgs.apple-cursor;
-      size = 20;
     };
   };
 }

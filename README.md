@@ -21,7 +21,7 @@ sudo nixos-rebuild switch --flake .#desktop  # or laptop
 
 ## What's Included
 
-- **Desktop setup**: High-performance configuration with GNOME
+- **Desktop setup**: High-performance configuration with KDE Plasma
 - **Laptop setup**: Power-efficient configuration with wireless support
 - **Security**: Hardened system settings
 - **Development tools**: Git, direnv, and common utilities
