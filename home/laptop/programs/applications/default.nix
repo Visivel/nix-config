@@ -5,8 +5,6 @@
 
   home.packages = with pkgs; [
     appimage-run
-    gamemode
-    prismlauncher
     ungoogled-chromium
   ];
   
