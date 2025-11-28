@@ -11,6 +11,7 @@
     xclicker
     ayugram-desktop
     piper
+    vlc
   ];
 
   services.flatpak = {
