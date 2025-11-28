@@ -7,7 +7,7 @@ A personal NixOS configuration with desktop and laptop setups.
 ### Update the system
 ```bash
 nix flake update
-sudo nixos-rebuild switch --flake .#desktop  # or laptop
+sudo nixos-rebuild switch --flake .#desktop --impure  # or laptop
 ```
 
 ## What's Included
