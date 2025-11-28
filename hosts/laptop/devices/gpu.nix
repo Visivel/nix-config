@@ -3,7 +3,7 @@
 {
   services.xserver = {
     enable = true;
-    videoDrivers = [ "amdgpu" ];
+    videoDrivers = [ "nvidia" ];
   };
 
   hardware = {
@@ -11,41 +11,29 @@
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
-        mesa
-        rocmPackages.clr.icd
+        nvidia_x11
+        nvidia_x11.libgl
+        vulkan-loader
+        vulkan-tools
       ];
-    };
-    
-    amdgpu = {
-      opencl.enable = true;
     };
   };
 
   environment.variables = {
-    AMD_VULKAN_ICD = "RADV";
-    VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json";
-    RADV_PERFTEST = "sam,nggc,rt";
-    RADV_DEBUG = "zerovram";
-    mesa_glthread = "true";
-    AMD_DEBUG = "nodma";
+    NVIDIA_VISIBLE_DEVICES = "all";
+    __GL_THREADED_OPTIMIZATIONS = "1";
+    __GL_SHADER_DISK_CACHE = "1";
   };
 
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];
-
   boot.kernelParams = [
-    "amdgpu.ppfeaturemask=0xffffffff"
-    "amdgpu.gpu_recovery=1"
-    "amdgpu.dpm=1"
-    "amdgpu.dc=1"
+    "nvidia-drm.modeset=1"
   ];
 
   environment.systemPackages = with pkgs; [
-    rocmPackages.clr
-    rocmPackages.rocm-runtime
+    nvidia_x11
+    nvidia_x11.libgl
     vulkan-tools
     vulkan-loader
-    vulkan-validation-layers
+    nvidia-utils
   ];
 }
