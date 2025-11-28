@@ -24,4 +24,6 @@
       };
     };
   };
+  
+  update.onActivation = true;
 }
