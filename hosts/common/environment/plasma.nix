@@ -31,7 +31,6 @@
     kamera
     kcharselect
     kcolorchooser
-    kdeconnect-kde
     kdenlive
     kdepim-addons
     kdepim-runtime
@@ -40,12 +39,10 @@
     khelpcenter
     kmail
     kmouth
-    kolourpaint
     konversation
     korganizer
     krdc
     krfb
-    kdeplasma-addons
     ksshaskpass
     kwallet
     kwalletmanager
@@ -63,6 +60,10 @@
     ark
     okular
     spectacle
+    kdeconnect-kde
+    kolourpaint
+    kdeplasma-addons
+    kcalc
   ];
 
   programs.dconf.enable = true;
