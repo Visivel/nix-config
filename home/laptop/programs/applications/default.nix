@@ -5,25 +5,18 @@
 
   home.packages = with pkgs; [
     appimage-run
-    ungoogled-chromium
+    librewolf
+    prism-launcher
+    legcord
+    xclicker
+    ayugram-desktop
+    piper
   ];
-  
-  services.flatpak = {
-    packages = [
-      "org.equicord.equibop"
-    ];
-    
-    overrides = {
-      "org.equicord.equibop" = {
-        Context = {
-          filesystems = [
-            "host"
-            "host-etc"
-          ];
-        };
-      };
-    };
 
-    update.onActivation = true;
+  services.flatpak = {
+    packages = [ 
+      "com.github.tchx84.Flatseal"
+      "org.vinegarhq.Sober"
+    ];
   };
 }
