@@ -10,8 +10,8 @@
       df = "df -h";
       du = "du -h";
       free = "free -h";
-      switch = "sudo nixos-rebuild switch --flake /etc/nixos#desktop --impure";
-      boot = "sudo nixos-rebuild boot --flake /etc/nixos#desktop --impure";
+      switch = "sudo nixos-rebuild switch --flake /etc/nixos#laptop --impure";
+      boot = "sudo nixos-rebuild boot --flake /etc/nixos#laptop --impure";
       update = "nix flake update";
       gc = "nix-collect-garbage -d";
     };
