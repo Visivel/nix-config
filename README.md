@@ -4,15 +4,6 @@ A personal NixOS configuration with desktop and laptop setups.
 
 ## Quick Start
 
-### Switch to this configuration
-```bash
-# For desktop
-sudo nixos-rebuild switch --flake .#desktop
-
-# For laptop  
-sudo nixos-rebuild switch --flake .#laptop
-```
-
 ### Update the system
 ```bash
 nix flake update
